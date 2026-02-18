@@ -126,6 +126,33 @@ Isso permite:
 
 ---
 
+## ▶️ Como rodar o projeto
+
+1. **Clonar o repositório**
+```bash
+git clone https://github.com/seu-usuario/ai_ads_agent.git
+cd ai_ads_agent
+
+2. Criar e ativar o ambiente virtual
+python -m venv venv
+venv\Scripts\activate
+
+3. Instalar as dependências
+pip install -r requirements.txt
+
+4. Configurar a variável de ambiente
+Crie um arquivo .env na raiz do projeto:
+env
+OPENAI_API_KEY=sua_api_key_aqui
+
+5. Rodar a API
+uvicorn api:app --reload
+
+6. Usar a aplicação
+Swagger: http://127.0.0.1:8000/docs
+Executar pipeline: POST /pipeline/run
+Consultar decisões: GET /decisions
+
 ## Tecnologias Utilizadas
 - Python
 - FastAPI
@@ -133,7 +160,7 @@ Isso permite:
 - Large Language Model (LLM)
 - Power BI
 - CSV como fonte de dados
-
+```
 ---
 
 ## Aprendizados e Diferenciais
